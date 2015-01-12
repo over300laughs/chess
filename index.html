@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<script src="assn5.js"> </script>
+	</head>
+	
+	<body onLoad="attachAjax();">
+		<div class="container">
+			<h1>
+				Preliminary Software Design
+			</h1>
+			<h2>
+				<strong>Game Description:</strong>
+			</h2>
+			<p class="more-para">
+				This project is a chess game and requires 2 users.
+				Both players enter in their name and then a game is begun.
+				The players take turns moving until they are finished.
+			</p>
+			<a class="center-this-header link" target="_blank" href="active-board.html">View The Chess Board in HTML</a>
+			<a class="center-this-header link" target="_blank" href="js-board.html">View The Chess Board Generated Using JavaScript</a>
+			<a class="center-this-header link" target="_blank" href="documentation.html">View The Documentation Page</a>
+			<hr>
+			<h2>
+				<strong>XML Data:</strong>
+			</h2>
+			<p class="more-para">
+				This section displays data from an xml file. The data represents a saved game. Information to show
+				the location of the pieces is provided as well as each piece and color that belongs in the location.
+				<br><br><span id="xml-data"></span>
+			</p>
+			<h2 class="center-this-header">
+				<strong>Login Here</strong><br>
+			</h2>
+				<label class="up" for="username">User Name</label>
+				<input class="up" id="username" type="text" size="20">
+				<label class="up" for="password">Password</label>
+				<input class="up" id="password" type="password" size="20">
+				<button class="up" id="login" type="button" >Log In</button><!-- Attach event listener! here! -->
+				<div id="incorrect">*There was an error logging in.</div>
+			<hr>
+			<h2 class="center-this-header">
+				<strong>Required Objects</strong>
+			</h2>
+			<hr>
+			<h2>
+				Game Object
+			</h2>
+				<h3><strong>Functions-</strong></h3><br>
+				<p class="more-para">init();<br>
+					This function propagates the board to start the game.<br>
+					highlight();<br>
+					Highlights selected piece<br>
+					getPeiceType();<br>
+					Identifies what piece it is. 
+				</p><br>
+				<h3><strong>Properties</strong></h3>
+				<br>
+				<p class="more-para">
+					stepBack[] - this is an array that holds info from the last move.
+					This info may include objects, other arrays as well as integers and booleans. 
+					Accessing this array will allow the user to hit back if they moved a piece unintentionally.
+					Note: This function only steps back one step and is additional feature that may or may not be built
+					depending on complexity. However, I'd like to see it in the game if I can get to work.
+					<br>
+				</p>
+			<h2>
+				Board Object
+			</h2>
+			<h3><strong>Functions-</strong></h3><br>
+			<p class="more-para">
+				propagate();<br>
+				Contains all html to construct the board.
+			</p><br>
+			<h3><strong>Properties</strong></h3>
+			<p class="more-para">
+				player1<br>
+				player2<br>
+				Both are booleans and indicate which view should be displayed. 
+			</p>
+			<h2>
+				Player Object
+			</h2>
+				<h3><strong>Functions-</strong></h3><br>
+			<p class="more-para">
+				getLocation();<br>
+				Returns the current location of the piece on the board<br>
+				movePiece();<br>
+				Calls the setLocation() function for the piece and handles actions (through the game object) to opposing players pieces.
+			</p><br>
+			<h3><strong>Properties</strong></h3>
+			<p class="more-para">
+				allPieces[] - Is an array of all the pieces for each player.<br>
+			</p>
+			<h2>
+				Pawn, King, Queen, Bishop, Knight and Rook Objects
+			</h2>
+			<h3><strong>Functions-</strong></h3><br>
+			<p class="more-para">
+				getLocation();<br>
+				attachClickEvent() sets intial event listeners<br>
+				Returns the current location of the piece on the board<br>
+				setLocation(int);<br>
+				Sets the new location of that piece on the board<br>
+				possibleMoves();<br>
+				showmoves() calls the functions below.<br> 
+				Checks and returns which moves are possible<br>
+				showPawnMoves()<br>
+				showKightMoves()<br>
+				And so on are used for all pieces in the game<br>
+				<br>
+			</p><br>
+			<h3><strong>Properties</strong></h3>
+			<p class="more-para">
+				Alive - Type boolean and is true by default.<br>
+			</p>
+			
+			<h2 class="center-this-header">The Model Description</h2>
+			<hr>
+			<ul class="more-p">
+				<li>
+					The user clicks the Play Button
+				</li>
+				<li>
+					The game object asks each player for a name. Names will displayed to show who's turn it is.
+				</li>
+				<li>
+					A loop (most likely foreach) will place all the pieces in their appropriate location to start.
+				</li>
+				<li>
+					When a piece is selected the appropriate moves are displayed.
+				</li>
+				<li>
+					When an optional move is clicked the piece object remembers its new location
+				</li>
+				<li>
+					The piece object then informs the game object
+				</li>
+				<li>
+					The game object will tell the board object and the pieces to switch sides allowing the same view for both players.
+					Each player object will run through a loop (most likely foreach) to propagate the switch.
+				</li>
+				<li>
+					When a piece is taken it is marked as taken and is removed from the array of piece objects held by the player object.
+					Can use CSS or actually delete object from the array.
+				</li>
+				<li>
+					Subsequent moves continue until the finished button is selected.
+				</li>
+				<li>
+					The game object then asks if the users want to play another game or quit.
+				</li>
+				<li>
+					The game object will reset the game as indicated or simply leave the page with the completed game in tact.
+				</li>
+			</ul>
+			
+			<h2 class="center-this-header">References</h2>
+			<hr>
+			<h2>These images were provided courtesy of Pixabay.com via their open source library</h2>
+			<h3>Click on any image below to go to pixabay.com</h3>
+			<a target="_blank" href="http://pixabay.com/">
+				<img src="images/wqueen.png"/>
+			</a>
+			<a target="_blank" href="http://pixabay.com/">
+				<img src="images/bpawn.png"/>
+			</a>
+			<a target="_blank" href="http://pixabay.com/">
+				<img src="images/wrook.png"/>
+			</a>
+			<a target="_blank" href="http://pixabay.com/">
+				<img src="images/bbishop.png"/>
+			</a>
+			<a target="_blank" href="http://pixabay.com/">
+				<img src="images/wking.png"/>
+			</a>
+			<a target="_blank" href="http://pixabay.com/">
+				<img src="images/bknightl.png"/>
+			</a>
+			<h2 class="center-this-header">Student Information</h2>
+			<hr>
+			<p class="more-p">
+			<Label class="more-para">Name: </label>Michael Robinson<br>
+			<Label class="more-para">Student ID: </label>10331878<br>
+			</p>
+		</div>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

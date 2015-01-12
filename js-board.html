@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<script src="chess.js"> </script>
+		<script src="model.js"> </script>
+		<script src="view.js"> </script>
+	</head>
+	<body onLoad="init();">
+		<audio src="audio/audio.mp3" preload="auto"></audio>
+		<div class="container" id="div-handle">
+			<div id="update-box">
+				<p class="more-para">Click Log</p>
+			</div>
+			<div id="right-box">
+				<p class="more-para mm">Players</p>
+				<label class="remove" for="player-1">Player 1</label>
+				<input class="remove" type="text" id="p1p1" name="player-1" size="20">
+				<label class="remove" for="player-2">Player 2</label>
+				<input class="remove" type="text" id="p2p2" name="player-2" size="20">
+				<button class="remove" type="button" onclick="getNames()">Post Player Info</button><br><br>
+				<div id="dataBox"></div>
+				<button id="clear-button">Remove Local Storage</button>
+				<button onclick="loadGame();">Load Game From XML</button>
+			</div>
+		</div>
+	</body>
+</html>

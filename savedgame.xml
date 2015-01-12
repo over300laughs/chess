@@ -1,0 +1,18 @@
+<places>
+<spot piece="queen" color="b"><location>11</location></spot>
+<spot piece="pawn" color="w"><location>26</location></spot>
+<spot piece="pawn" color="w"><location>28</location></spot>
+<spot piece="rook" color="w"><location>31</location></spot>
+<spot piece="pawn" color="b"><location>32</location></spot>
+<spot piece="pawn" color="w"><location>33</location></spot>
+<spot piece="king" color="w"><location>34</location></spot>
+<spot piece="bishop" color="w"><location>35</location></spot>
+<spot piece="pawn" color="w"><location>38</location></spot>
+<spot piece="pawn" color="b"><location>39</location></spot>
+<spot piece="pawn" color="b"><location>49</location></spot>
+<spot piece="pawn" color="b"><location>50</location></spot>
+<spot piece="queen" color="w"><location>51</location></spot>
+<spot piece="king" color="b"><location>57</location></spot>
+<spot piece="rook" color="b"><location>58</location></spot>
+<spot><location>black</location></spot>
+</places>

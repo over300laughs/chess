@@ -1,0 +1,49 @@
+var chapters = [
+	{
+	"0": {"located": "11"
+		"piece": "queen"
+		"color": "black"},
+	"1": {"located": "26"
+		"piece": "pawn"
+		"color": "white"},
+	"2": {"located": "28"
+		"piece": "pawn"
+		"color": "white"},
+	"3": {"located": "31"
+		"piece": "rook"
+		"color": "white"},
+	"4": {"located": "32"
+		"piece": "pawn"
+		"color": "black"},
+	"5": {"located": "33"
+		"piece": "pawn"
+		"color": "white"},
+	"6": {"located": "34"
+		"piece": "king"
+		"color": "white"},
+	"7": {"located": "35"
+		"piece": "bishop"
+		"color": "white"},
+	"8": {"located": "38"
+		"piece": "pawn"
+		"color": "white"},
+	"9": {"located": "39"
+		"piece": "pawn"
+		"color": "black"},
+	"10": {"located": "49"
+		"piece": "pawn"
+		"color": "black"},
+	"11": {"located": "50"
+		"piece": "pawn"
+		"color": "black"},
+	"12": {"located": "51"
+		"piece": "queen"
+		"color": "white"},
+	"13": {"located": "57"
+		"piece": "king"
+		"color": "black"},
+	"14": {"located": "58"
+		"piece": "rook"
+		"color": "black"}
+	}
+]

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<script src="chess.js"> </script>
+		<script src="model.js"> </script>
+		<script src="view.js"> </script>
+	</head>
+	<body>
+		<div class="container">
+			<div>
+				<h1>Checkpoint HTML Page</h1>
+			</div>
+				<div>
+					<div>
+						<h2>Completed Game Logic</h2>
+					</div>
+					<ul>
+						<li>
+							<p> 
+								Function that switches turns - nextTurn()
+							</p>
+						</li>
+						<li>
+							<p> 
+								Functinon that checks to see what is in a square (what color or if the square is empty) - checkSquare()
+							</p>
+						</li>
+						<li>
+							<p> 
+								Function that gets the color of the piece - getColor()
+							</p>
+						</li>
+						<li>
+							<p> 
+								Function that highlights possible moves - highlight()
+							</p>
+						</li>
+						<li>
+							<p> 
+								Function that moves whatever piece to a new location - Move()
+							</p>
+						</li>
+						<li>
+							<p> 
+								Functions that remove event listeners and highlights removeHighlight()
+							</p>
+						</li>
+					</ul>
+					<h2>Instructions To Try Out The Game</h2>
+					<p>
+						To test these functions simply click on a pawn.<br>
+						The piece and its possible moves will be highlighted.<br>
+						After the first piece is moved then you will be able to click on a black pawn and move it.<br>
+						The game cannot yet enforce who's turn it is, nor are any pieces ready to be moved except for pawns.<br>
+						But basically highlight and moving functionality has been built.<br>
+						Many of the functions to do this will be resused when it comes to moving other pieces as well.<br>
+						Its important to note that the pawns can't move diagonally yet.
+					</p>
+				</div>
+			<div>
+				<h2>Incomplete Game Logic</h2>
+			</div>
+			<ul>
+				<li>
+					<p> 
+						Functions that check possible moves for a piece - showQueenMoves() etc
+					</p>
+				</li>
+				<li>
+					<p> 
+						A function to take and display taken pieces - taken() (Might display removed pieces)
+					</p>
+				</li>
+				<li>
+					<p> 
+						Function that checks the possible pawn moves showPawnMoves() (A few bugs need fixing but its about done) 
+					</p>
+				</li>
+			</ul>
+			<a class="g" href=js-board.html>Click Here To Go To The Game</a>
+		</div> 
+	</body>
+</html>
